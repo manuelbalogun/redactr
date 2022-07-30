@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redactr</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container main">
+    <aside class="sidebar">
+
+      <section class="top-nav">
+        <h1 class="logo">Redactr</h1>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </section>
+
+      <section class="sidebar-nav">
+        <ul class="list-items hide-nav">
+          <li class="item">
+            <img src="./assets/home.png" alt="icon" />
+            <span class="item-text">Home</span>
+          </li>
+
+          <li class="item">
+            <img src="./assets/circle.png" alt="icon" />
+            <span class="item-text">Circles</span>
+          </li>
+
+          <li class="item">
+            <img src="./assets/leaderboard.png" alt="icon" />
+            <span class="item-text">Leaderboard</span>
+          </li>
+
+          <li class="item">
+            <img src="./assets/reward.png" alt="icon" />
+            <span class="item-text">Rewards</span>
+          </li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <main class="main-content">
+
+      <div class="header-sect">
+        <h2 class="Search Redactr">Your feed</h2>
+      </div>
+
+      <div class="create-post">
+        <span class="image-border">
+          <img src="./assets/avatar.png" alt="avatar" />
+        </span>
+        <div id="form">
+          <textarea class="post" name="post" type="text" value="" placeholder="What's on your mind, Janet?"
+            oninput="handlePostChange(this.value, this.name)"></textarea>
+
+          <div class="redactr-sect">
+            <input type="checkbox" name="toggleScramble" class="toggleScramble" onchange="handleToggleChange(event)" />
+            <label class="checkbox-text" for="toggleScramble">Redact Text</label>
+          </div>
+
+          <button class="submit">Post</button>
+        </div>
+      </div>
+      <div class="all-posts"></div>
+
+    </main>
+
+
+    <aside class="site-analytics">
+      <div class="search-sect">
+        <input type="text" placeholder="Search Redactr" />
+        <img class="icon-search" src="./assets/search.png" alt="icon" />
+        <ul class="analytics-content">
+          <img class="" src="./assets/site-analytics.png" alt="icon" />
+          <p class="bolden">Site Analytics</p>
+          <li class="date">Friday, 22 August 2022 </li>
+          <li class="">Number of words scanned</li>
+          <p>2000</p>
+          <li class="">Number of scrambled words matched</li>
+          <p>654</p>
+          <li class="">Total time taken</li>
+          <p>8 min</p>
+        </ul>
+      </div>
+    </aside>
+
+    <aside class="popup-screen redactr-text none">
+      <section>
+        <img class="close-btn" src="./assets/close-modal.png" />
+        <div class="words-sect">
+          <p>Please type in the words you'd like to redact within your post</p>
+          <p class="small"> (Separated by a space)</p>
+          <input class="pop-up" type="text" name="redactr" value="" placeholder="Words to be scrambled"
+            onchange="handleRedartrChange(this.value, this.name)" />
+        </div>
+
+        <button class="btn redact-btn ">Redact Now</button>
+      </section>
+    </aside>
+
+    <aside class="popup-screen  redactr-text stats-popup none">
+      <section>
+        <img class="close-btn close-stats-btn" src="./assets/close-modal.png" />
+        <div class="words-sect analytics-content stats-modal">
+          <img class="" src="./assets/site-analytics.png" alt="icon" />
+          <p class="bolden stats-header">Post Analytics</p>
+          <li class="">Number of words scanned</li>
+          <p class="total-words">2000</p>
+          <li class="">Number of scrambled words matched</li>
+          <p class="total-words-scrambled">654</p>
+          <li class="">Total time taken</li>
+          <p class="total-time">8 min</p>
+        </div>
+      </section>
+    </aside>
+
+
+
+  </div>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs"></script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+</body>
+
+</html>
